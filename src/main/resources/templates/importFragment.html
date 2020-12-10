@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!--在当前标签内部插入引入的片段，之前片段的标签是保留-->
+    <div th:insert="~{footer :: copyright}"></div>
+    <!--片段的标签以及内容替换当前标签-->
+    <div th:replace="~{footer :: copyright}"></div>
+    <!--保留当前标签，引入片段的内容，而没有标签-->
+    <div th:include="~{footer :: copyright}"></div>
+</body>
+</html>

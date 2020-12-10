@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!-- num 表示要显示的数据，1表示整数部分最少保留的位数，2表示小数部分的位数 -->
+    数值：<span th:text="${#numbers.formatDecimal(num,1,2)}"></span><br><br>
+    字符串：<span th:text="${str}"></span><br>
+    字符串显示10个字符：<span th:text="${#strings.abbreviate(str,10)}"></span><br>
+    <div th:text="${#strings.isEmpty(str)}">当前字符串为空</div>
+</body>
+</html>
