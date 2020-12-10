@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <!--获取属性的值-->
+        <tr th:each="user,iterStat : ${list}">
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+        </tr>
+        <!--map的键值获取-->
+        <tr th:each="map,iterStat : ${maps}">
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${map.id}"></td>
+            <td th:text="${map.name}"></td>
+            <td th:text="${map.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>
