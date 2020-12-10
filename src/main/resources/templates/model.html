@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1>数据模型的展示</h1>
+    <h2>普通标签</h2>
+    <span th:text="${username}"></span><br>
+    <h2>表单</h2>
+    用户名：<input type="text" th:value="${username}">
+    <h2>model数据的字符串拼接方式</h2>
+    <div th:text="'欢迎' + ${username} + '用户'"></div>
+    <div th:text="|欢迎${username}用户|"></div>
+</body>
+</html>

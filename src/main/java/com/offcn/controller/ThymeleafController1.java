@@ -46,4 +46,16 @@ public class ThymeleafController1 {
         model.addAttribute("maps",maps);
         return "list";
     }
+
+    @GetMapping("/showImage")
+    public String showImage(Model model){
+        model.addAttribute("url","cat.jpg");
+        return "image";
+    }
+
+    @GetMapping("/showModel")
+    public String showModel(Model model){
+        model.addAttribute("username","xiaohua");
+        return "model";
+    }
 }
