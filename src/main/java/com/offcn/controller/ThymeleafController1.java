@@ -58,4 +58,17 @@ public class ThymeleafController1 {
         model.addAttribute("username","xiaohua");
         return "model";
     }
+
+    @GetMapping("/if")
+    public String ifModel(Model model){
+        model.addAttribute("flag1","yes");
+        model.addAttribute("flag2",true);
+        return "if";
+    }
+
+    @GetMapping("/switch")
+    public String switchModel(Model model){
+        model.addAttribute("type","manager");
+        return "switch";
+    }
 }

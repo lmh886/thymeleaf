@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1 th:if="${flag1 == 'yes'}">当前属性为yes</h1>
+    <!--条件不满足的时候显示-->
+    <h1 th:unless="${flag1 == 'yes'}">当前属性不为yes</h1>
+</body>
+</html>

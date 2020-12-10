@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <div th:switch="${type}">
+        <p th:case="admin">admin</p>
+        <p th:case="user">user</p>
+        <p th:case="manager">manager</p>
+    </div>
+</body>
+</html>
